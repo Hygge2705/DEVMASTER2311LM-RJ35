@@ -1,0 +1,40 @@
+1. Download mockproject
+2. Chuyển giao diện thiết kế từ html (react basic.html) -> ứng dụng reactjs
+    - Tạo ứng dụng reactJs (mini-project--1)
+    - Sử dụng công cụ transform.tool để chuyển mã html -> mã JSX
+    - Mở App.js (Đổi thành Class Component App)
+        -> copy mã jsx và đây
+    - Copy thư mục css từ giao diện html -> thư mục public của ứng dụng
+
+3. Phân chia ứng dụng thành các Component
+    - App: 
+        --Control
+        --ListStudent
+            -- Student
+        --Form
+4. Tạo các Component (Class)
+5. Xác định các chức năng trong ứng dụng: 
+    - Hiển thị danh sách Sinh viên trên ListStudent
+    - Xem thông tin sinh viên -> Hiển thị trên Form
+    - Sửa thông tin sinh viên -> Cập nhật trên Form
+    - Thêm mới thông tin sinh viên: Control -> Form
+    - Xóa thông tin sinh viên: ListStudent
+    - Tìm kiếm (Control)
+    - Sắp xếp (Control)
+
+   5.1, Hiển thị thông tin sinh viên trên ListStudent:
+    - App: 
+        + Tổ chức dữ liệu trong state: Students
+        + render dữ liệu vào ListStudent
+    - ListStudent:
+        + Nhận dữ liệu từ App
+        + render dữ liệu vào Student Component
+    - Student:
+        + Lấy dữ liệu từ props -> Hiển thị lên các thành phần của Component
+
+   5.2, Ẩn hiện form thao tác
+    - Ban đầu form ẩn: 
+    - Khi người dùng chọn chức năng: (Thêm/Xem/Sửa) -> Hiển thị Form
+     ==> Sử dụng biển trạng thái điều khiển 
+    - Khi thêm mới:
+        +Control -> event -> App -> Cập nhật isToggle=true: hiển thị form

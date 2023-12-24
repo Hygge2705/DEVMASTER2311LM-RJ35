@@ -1,0 +1,5 @@
+- Xử lý sự kiện trên components
+- sự kiện với state (chủ yếu sử dụng trong class components)
+- sự kiện với props
+- controlled components
+- render data
