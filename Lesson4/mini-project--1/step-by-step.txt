@@ -37,4 +37,46 @@
     - Khi người dùng chọn chức năng: (Thêm/Xem/Sửa) -> Hiển thị Form
      ==> Sử dụng biển trạng thái điều khiển 
     - Khi thêm mới:
-        +Control -> event -> App -> Cập nhật isToggle=true: hiển thị form
+        + Control -> event -> App -> Cập nhật isToggle=true: hiển thị form
+    - Khi click vào nút xem (Student) -> event(onViewOrEdit -> toggle=true/actionName="Close") -> ListStudent -> event(onView) -> App
+        + App: cập nhật isToggle=true / actionName=Close
+    - Khi click vào nút xem (Student) -> event(onViewOrEdit -> toggle=true/actionName="Update") -> ListStudent -> event(onView) -> App
+        + App: cập nhật isToggle=true / actionName=Update
+
+5.3, Chức năng xem (Student)
+    - Student: -> event (đối tượng sinh viên: Student) -> ListStudent -> App
+    - App: Student -> render -> Form
+
+5.4, Chức năng hiển thị dữ liệu trên Form
+    - App:
+        renderStudent -> Form(Comp)
+    - Form: 
+        + tổ chức dữ liệu Student trong state
+        + các input:
+            name: thuộc tính trong state
+            value: this.state.[thuộc tính trong state]
+
+5.5, Chức năng đóng form (Close)
+    - Form:
+        event: (onSubmit: toggle=false/actionName="Close") -> App
+    - App:
+        Cập nhật lại:
+            isToggle
+            actionName
+            student
+5.5, Chức năng đóng form (Add New)
+
+5.5, Chức năng đóng form (Update)
+
+5.6, Chức năng xóa:
+    - Student:
+        event (onDelete: student) -> ListStudent -> App
+    - App:
+         handleDelte ->tìm trong student-> xóa
+
+5.7, Chức năng lọc/tìm kiếm
+    - Control:
+        event (keyword) -> App ->
+    - App:
+        state: keyword
+    
